@@ -15,3 +15,21 @@ Requirements:
 2. At least one function
 3. Conditional logic (if/else)
 4. Diaplay result in the UI
+
+Plan:
+1. Develop website skeleton
+    -Title banner
+    -Instructions
+    -Button: Roll d20
+2. Button click causes a random number 1-20 to be generated
+    -onclick: generate random number between 1 & 20
+    -return result
+3. Result is displayed to user on webpage
+    -Add display box and legend
+    -Show result
+4. Display message based on roll
+    -Add message to display box
+    -1-7: No - "The Oracle says no"
+    -8-13: Maybe - "The Oracle says maybe. Either it is a partial result, or reroll if a yes/no answer is needed"
+    -14-20: Yes - "The Oracle says yes"
+5. Steps 2-4 can be done infinitely
