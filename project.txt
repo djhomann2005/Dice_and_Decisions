@@ -1,0 +1,17 @@
+--- Level 1 ---
+Goal: Create a browser-based tool that:
+1. Has a button
+2. Clicking it rolls a die (1-20)
+3. Displays the result
+4. Displays a message based on the roll
+
+Rules (Example)
+-1-5 -> Failure
+-6-14 -> Mixed Result
+-15-20 -> Success
+
+Requirements:
+1. JavaScript logic
+2. At least one function
+3. Conditional logic (if/else)
+4. Diaplay result in the UI
