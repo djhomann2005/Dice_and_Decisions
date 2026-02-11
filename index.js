@@ -27,9 +27,14 @@ function displayResult(roll, message) {
     messageContainer.innerHTML = message;
 }
 
-// code for testing
-let result = rollDice();
-let message = getMessage(result);
-console.log("Roll: " + result);
-console.log("Message: " + message);
-displayResult(result, message);
+function runOracle() {
+    let roll = rollDice();
+    let message = getMessage(roll);
+    displayResult(roll, message);
+}
+
+// Run in response to press of Roll button
+document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("rollButton")
+            .addEventListener("click", runOracle);
+});
