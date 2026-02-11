@@ -20,10 +20,16 @@ function getMessage(roll) {
 }
 
 // display result on webpage
-function displayResult() {
-    
+function displayResult(roll, message) {
+    const rollContainer = document.getElementById("rollResult");
+    const messageContainer = document.getElementById("oracleMessage");
+    rollContainer.innerHTML = `Roll Result: ${roll}`;
+    messageContainer.innerHTML = message;
 }
 
 // code for testing
 let result = rollDice();
-console.log(getMessage(result));
+let message = getMessage(result);
+console.log("Roll: " + result);
+console.log("Message: " + message);
+displayResult(result, message);
