@@ -1,0 +1,21 @@
+{
+  "name": "dice_and_decisions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djhomann2005/Dice_and_Decisions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/djhomann2005/Dice_and_Decisions/issues"
+  },
+  "homepage": "https://github.com/djhomann2005/Dice_and_Decisions#readme"
+}
