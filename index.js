@@ -1,40 +1,35 @@
 // Function to get random d20 roll
 function rollDice() {
-    const roll = Math.floor(Math.random() * 20 + 1);
-    return roll;
+    return Math.floor(Math.random() * 20 + 1);
 }
 
 // Determine Oracle message based on roll
 function getMessage(roll) {
-    let message = '';
-
     if ( roll <= 7 ) {
-        message = "The Oracle says No";
+        return "The Oracle says No";
     } else if ( roll <= 13 ) {
-        message = "The Oracle says maybe. Either it is a partial result, or reroll if a yes/no answer is needed";
+        return "The Oracle says maybe. Either it is a partial result, or reroll if a yes/no answer is needed";
     } else {
-        message = "The Oracle says Yes";
+        return "The Oracle says Yes";
     }
-
-    return message;
-}
-
-// display result on webpage
-function displayResult(roll, message) {
-    const rollContainer = document.getElementById("rollResult");
-    const messageContainer = document.getElementById("oracleMessage");
-    rollContainer.innerHTML = `Roll Result: ${roll}`;
-    messageContainer.innerHTML = message;
-}
-
-function runOracle() {
-    let roll = rollDice();
-    let message = getMessage(roll);
-    displayResult(roll, message);
 }
 
 // Run in response to press of Roll button
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("rollButton")
-            .addEventListener("click", runOracle);
+document.addEventListener("DOMContentLoaded", () => {
+    const rollContainer = document.getElementById("rollResult");
+    const messageContainer = document.getElementById("oracleMessage");
+    const rollButton = document.getElementById("rollButton");
+
+    function displayResult(roll, message) {
+        rollContainer.textContent = `Roll Result: ${roll}`;
+        messageContainer.textContent = message;
+    }
+
+    function runOracle() {
+        const roll = rollDice();
+        const message = getMessage(roll);
+        displayResult(roll, message);
+    }
+
+    rollButton.addEventListener("click", runOracle);
 });
