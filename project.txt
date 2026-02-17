@@ -33,3 +33,94 @@ Plan:
     -8-13: Maybe - "The Oracle says maybe. Either it is a partial result, or reroll if a yes/no answer is needed"
     -14-20: Yes - "The Oracle says yes"
 5. Steps 2-4 can be done infinitely
+
+
+Level 1 — Foundation (You should be able to do this)
+Goal
+    Create a browser-based tool that:
+    Has a button
+    Clicking it rolls a die (1–20)
+    Displays the result
+    Displays a message based on the roll
+
+Rules (Example)
+    1–5 → “Failure”
+    6–14 → “Mixed result”
+    15–20 → “Success”
+
+Requirements
+    JavaScript logic
+    At least one function
+    Conditional logic (if / else)
+    Display result in the UI
+
+
+
+🧩 Level 2 — State & Structure (React comes in)
+Rebuild the same idea using React.
+
+Additions
+    Store the roll result in state
+    Store the message in state
+    Clicking the button updates state
+    UI re-renders based on state
+
+Stretch Thinking
+    What is data?
+    What changes?
+    What triggers change?
+
+
+🧩 Level 3 — Player Choice (Decision-Making)
+Add one decision before the roll.
+Example:
+    “Play it safe”
+    “Take a risk”
+
+Mechanics
+    Safe → roll 2d10, take the higher
+    Risk → roll 1d20, but failure is worse
+
+Now you’re modeling:
+    inputs
+    rules
+    outcomes
+    This is core game logic thinking.
+
+🧩 Level 4 — Data-Driven Design (This is a big step)
+Move outcomes into data, not logic.
+
+Example:
+    const outcomes = [
+    { min: 1, max: 5, text: "Critical failure" },
+    { min: 6, max: 14, text: "Partial success" },
+    { min: 15, max: 20, text: "Great success" }
+    ];
+
+Then:
+    loop over data
+    find the matching range
+    display the result
+
+🧩 Level 5 — Visualization (Optional, but fun)
+Add:
+    a roll history list
+    or a simple bar chart using plain divs
+    or percentages after 50+ rolls
+    No libraries required.
+
+This reinforces:
+    .map()
+    keys
+    rendering lists
+    state accumulation
+
+🧩 Level 6 — Narrative Flavor (Very “you”)
+Add light text like:
+    “You attempt to cross the unstable bridge…”
+    Outcome text changes based on roll.
+
+This connects:
+    logic
+    presentation
+    storytelling
